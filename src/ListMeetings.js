@@ -9,7 +9,7 @@ function ListMeetings(props) {
         <Search />
       </div>
       <ol className="meeting-list">
-        {props.meetins.map((meeting, index) => (
+        {props.meetings.map((meeting, index) => (
           <Meeting meeting={meeting} key={index} />
         ))}
       </ol>
