@@ -10,7 +10,11 @@ function ListMeetings(props) {
       </div>
       <ol className="meeting-list">
         {props.meetings.map((meeting, index) => (
-          <Meeting meeting={meeting} key={index} />
+          <Meeting
+            meeting={meeting}
+            key={index}
+            onDeleteMeeting={props.onDeleteMeeting}
+          />
         ))}
       </ol>
     </div>

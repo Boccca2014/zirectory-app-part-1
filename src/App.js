@@ -35,8 +35,21 @@ class App extends Component {
     ],
   };
 
+  removeMeeting = (meeting) => {
+    this.setState((state) => {
+      return {
+        meetings: state.meetings.filter((m) => m._id !== meeting._id),
+      };
+    });
+  };
+
   render() {
-    return <ListMeetings meetings={this.state.meetings} />;
+    return (
+      <ListMeetings
+        meetings={this.state.meetings}
+        onDeleteMeeting={this.removeMeeting}
+      />
+    );
   }
 }
 

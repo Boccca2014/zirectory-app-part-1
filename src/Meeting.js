@@ -16,7 +16,10 @@ function Meeting(props) {
           <a href={meeting.link}>{meeting.link}</a>
         </p>
       </div>
-      <button className="meeting-remove"></button>
+      <button
+        className="meeting-remove"
+        onClick={() => props.onDeleteMeeting(meeting)}
+      ></button>
     </li>
   );
 }
