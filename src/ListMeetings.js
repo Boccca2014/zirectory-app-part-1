@@ -5,14 +5,19 @@ import { Component } from "react";
 
 class ListMeetings extends Component {
   state = {
-    query: ""
-  }
+    query: "",
+  };
+
+  updateQuery = (query) => {
+    this.setState({ query });
+    console.log(this.state.query);
+  };
 
   render() {
     return (
       <div className="list-meetings">
         <div className="list-meetings-top">
-          <Search />
+          <Search query={this.state.query} updateQuery={this.updateQuery} />
         </div>
         <ol className="meeting-list">
           {this.props.meetings.map((meeting, index) => (
