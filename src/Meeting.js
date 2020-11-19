@@ -2,9 +2,9 @@ import "./Meeting.css";
 import QRCode from "qrcode.react";
 
 function Meeting(props) {
-  const { meeting, key } = props;
+  const { meeting } = props;
   return (
-    <li className="meeting-list-item" key={key}>
+    <li className="meeting-list-item">
       <div>
         <QRCode value={meeting.link} />
       </div>
