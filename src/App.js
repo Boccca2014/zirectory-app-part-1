@@ -1,4 +1,5 @@
 import { Component } from "react";
+import ListMeetings from "./ListMeetings.js";
 
 class App extends Component {
   state = {
@@ -35,11 +36,7 @@ class App extends Component {
   };
 
   render() {
-    return (
-      <div style={{ color: "white" }}>
-        {JSON.stringify(this.state.meetings)}
-      </div>
-    );
+    return <ListMeetings meetings={this.state.meetings} />;
   }
 }
 
