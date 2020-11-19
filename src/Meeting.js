@@ -16,6 +16,7 @@ function Meeting(props) {
           <a href={meeting.link}>{meeting.link}</a>
         </p>
       </div>
+      <button className="meeting-remove"></button>
     </li>
   );
 }
